@@ -1,0 +1,313 @@
+{
+    "codeigniter4AddRouteClosure": {
+        "prefix": "ci4_add_route_closure",
+        "description": "codeigniter4 - Add Route With Closure",
+        "body": [
+            "$routes->add('${1:(:any)}', function()",
+            "{",
+            "    ${1:rss} = new ${2:RSSFeeder}();",
+            "    return ${3:rss}->${4:feed}('${5:general}');",
+            "});"
+        ]
+    },
+    "codeigniter4AddRoute": {
+        "prefix": "ci4_add_route",
+        "description": "codeigniter4 - Add Route ",
+        "body": [
+            "$routes->add('${1:from}', '${2:to}');"
+        ]
+    },
+    "codeigniter4Anchor": {
+        "prefix": "ci4_anchor",
+        "description": "codeigniter4 - Creates a standard HTML anchor link based on your local site URL.",
+        "body": [
+            "anchor('${1:uri}', '${2:your label}');"
+        ]
+    },
+    "codeigniter4Controller": {
+        "prefix": "ci4_controller",
+        "description": "codeigniter4 - Base Controller",
+        "body": [
+            "class ${TM_FILENAME} extends Controller",
+            "{",
+            "    public function $0()",
+            "    {",
+            "        $1",
+            "    }",
+            "}"
+        ]
+    },
+    "codeigniter4EchoView": {
+        "prefix": "ci4_echo_view",
+        "description": "codeigniter4 - Echo View",
+        "body": [
+            "echo view('${1:view_name}');"
+        ]
+    },
+    "codeigniter4ExtendLayout": {
+        "prefix": "ci4_extend_layout",
+        "description": "codeigniter4 - Extend layout (insert view into a layout)",
+        "body": [
+            "echo $this->extend('${1:default}');"
+        ]
+    },
+    "codeigniter4Filter": {
+        "prefix": "ci4_filter",
+        "description": "codeigniter4 - Base Filter Class",
+        "body": [
+            "namespace App\/Filters;",
+            "",
+            "use CodeIgniter\/HTTP\/RequestInterface;",
+            "use CodeIgniter\/HTTP\/ResponseInterface;",
+            "use CodeIgniter\/Filters\/FilterInterface;",
+            "",
+            "class ${TM_FILENAME}Filter implements FilterInterface",
+            "{",
+            "    public function before(RequestInterface $request)",
+            "    {",
+            "        ${1}",
+            "    }",
+            "",
+            "    //--------------------------------------------------------------------",
+            "",
+            "    public function after(RequestInterface $request, ResponseInterface $response)",
+            "    {",
+            "        ${2}",
+            "    }",
+            "}"
+        ]
+    },
+    "codeigniter4Getcookie": {
+        "prefix": "ci4_getCookie",
+        "description": "codeigniter4 - return any data from $_COOKIE",
+        "body": [
+            "$request->getCookie('${1:var_name}');",
+            "$2"
+        ]
+    },
+    "codeigniter4Getget": {
+        "prefix": "ci4_getGet",
+        "description": "codeigniter4 - return any data from $_GET",
+        "body": [
+            "$request->getGet('${1:var_name}');",
+            "$2"
+        ]
+    },
+    "codeigniter4GetLocale": {
+        "prefix": "ci4_get_locale",
+        "description": "codeigniter4 - Get Locale",
+        "body": [
+            "$locale = $this->request->getLocale();",
+            "$1"
+        ]
+    },
+    "codeigniter4Getpost": {
+        "prefix": "ci4_getPost",
+        "description": "codeigniter4 - This method is identical to getVar(), only it fetches POST data ",
+        "body": [
+            "$request->getPost('${1:var_name}');",
+            "$2"
+        ]
+    },
+    "codeigniter4Getserver": {
+        "prefix": "ci4_getServer",
+        "description": "codeigniter4 - This method returns the User Agent string from the SERVER data:",
+        "body": [
+            "$request->getServer('${1:var_name}');",
+            "$2"
+        ]
+    },
+    "codeigniter4Getvar": {
+        "prefix": "ci4_getVar",
+        "description": "codeigniter4 - This method is identical to getVar(), only it fetches GET data. ",
+        "body": [
+            "$request->getVar('${1:var_name}');",
+            "$2"
+        ]
+    },
+    "codeigniter4Isajax": {
+        "prefix": "ci4_isAjax",
+        "description": "codeigniter4 - True if the request is an AJAX request, otherwise false.",
+        "body": [
+            "$this->request->isAJAX()",
+            "$1"
+        ]
+    },
+    "codeigniter4Iscli": {
+        "prefix": "ci4_isCLI",
+        "description": "codeigniter4 - True if the request was initiated from the command line, otherwise false ",
+        "body": [
+            "$this->request->isCLI()",
+            "$1"
+        ]
+    },
+    "codeigniter4Issecure": {
+        "prefix": "ci4_isSecure",
+        "description": "codeigniter4 - True if the request is an HTTPS request, otherwise false.",
+        "body": [
+            "$this->request->isSecure()",
+            "$1"
+        ]
+    },
+    "codeigniter4LoadDatabase": {
+        "prefix": "ci4_load_database",
+        "description": "codeigniter4 - Connecting to your Database",
+        "body": [
+            "$db = \/Config\/Database::connect();",
+            "$1"
+        ]
+    },
+    "codeigniter4LoadHelper": {
+        "prefix": "ci4_load_helper",
+        "description": "codeigniter4 - Load Helper ",
+        "body": [
+            "helper('${1:helper_name}');",
+            "$2"
+        ]
+    },
+    "codeigniter4Log": {
+        "prefix": "ci4_log",
+        "description": "codeigniter4 - Logging Information ",
+        "body": [
+            "log_message('${1:error}', '{2:your error}');"
+        ]
+    },
+    "codeigniter4Model": {
+        "prefix": "ci4_model",
+        "description": "codeigniter4 - Base Model",
+        "body": [
+            "namespace App\/Models;",
+            "",
+            "use CodeIgniter\/Model;",
+            "",
+            "class ${TM_FILENAME} extends Model",
+            "{",
+            "    protected $table      = '${2:tableName}';",
+            "    protected $primaryKey = '${3:id}';",
+            "",
+            "    protected $returnType = '${4:array}';",
+            "    protected $useSoftDeletes = ${5:true};",
+            "",
+            "    protected $allowedFields = [${6}];",
+            "",
+            "    protected $useTimestamps = ${7:false};",
+            "    protected $createdField  = '${8:created_at}';",
+            "    protected $updatedField  = '${9:updated_at}';",
+            "    protected $deletedField  = '${10:deleted_at}';",
+            "",
+            "    protected $validationRules    = [${11}];",
+            "    protected $validationMessages = [${12}];",
+            "    protected $skipValidation     = ${13:false};",
+            "}"
+        ]
+    },
+    "codeigniter4NewViewRenderer": {
+        "prefix": "ci4_new_view_renderer",
+        "description": "codeigniter4 - New View Renderer",
+        "body": [
+            "${1:view} = new \/CodeIgniter\/View\/View();",
+            "$2"
+        ]
+    },
+    "codeigniter4QueryResultArray": {
+        "prefix": "ci4_query_result_array",
+        "description": "codeigniter4 - Returns the query results as an array of rows, where each row is itself an associative array.",
+        "body": [
+            "$results = $query->getResultArray();",
+            "$2"
+        ]
+    },
+    "codeigniter4QueryResult": {
+        "prefix": "ci4_query_result",
+        "description": "codeigniter4 - Array containing the fetched rows",
+        "body": [
+            "$results = $query->getResult();",
+            "$1"
+        ]
+    },
+    "codeigniter4QueryRowArray": {
+        "prefix": "ci4_query_row_array",
+        "description": "codeigniter4 - Returns the requested result row as an associative array.",
+        "body": [
+            "$row = $query->getRowArray();",
+            "$1"
+        ]
+    },
+    "codeigniter4QueryRow": {
+        "prefix": "ci4_query_row",
+        "description": "codeigniter4 - The requested row or NULL if it doesn’t exist",
+        "body": [
+            "$row = $query->getRow();",
+            "$1"
+        ]
+    },
+    "codeigniter4Query": {
+        "prefix": "ci4_query",
+        "description": "codeigniter4 - sql Query",
+        "body": [
+            "$query = $db->query('${1:SELECT name, title, email FROM my_table}');",
+            "$2"
+        ]
+    },
+    "codeigniter4RenderSection": {
+        "prefix": "ci4_render_section",
+        "description": "codeigniter4 - ",
+        "body": [
+            "echo $this->renderSection('${1:content}');",
+            "$2"
+        ]
+    },
+    "codeigniter4ViewPartials": {
+        "prefix": "ci4_view_partials",
+        "description": "codeigniter4 - ",
+        "body": [
+            "<?php echo $this->include('${1:content}') ?>",
+            "$2"
+        ]
+    },
+    "codeigniter4ViewSection": {
+        "prefix": "ci4_view_section",
+        "description": "codeigniter4 - View section",
+        "body": [
+            "<?php echo $this->section('${1:content}') ?>",
+            "    <h1>${2:Hello World}</h1>",
+            "<?php echo $this->endSection() ?>"
+        ]
+    },
+    "userAgent": {
+        "prefix": "ci4_user_agent",
+        "description": "codeigniter4 - Initializing user Agent the Class",
+        "body": [
+            "$agent = $this->request->getUserAgent();",
+            "$2"
+        ]
+    },
+    "email": {
+        "prefix": "ci4_email",
+        "description": "codeigniter4 - Sending Email",
+        "body": [
+            "$email = \/Config\/Services::email();",
+            "",
+            "$email->setFrom('your@example.com', 'Your Name');",
+            "$email->setTo('someone@example.com');",
+            "$email->setCC('another@another-example.com');",
+            "$email->setBCC('them@their-example.com');",
+            "",
+            "$email->setSubject('Email Test');",
+            "$email->setMessage('Testing the email class.');",
+            "",
+            "$email->send();"
+        ]
+    },
+    "CurlClass": {
+        "prefix": "ci4_curl",
+        "description": "codeigniter4 - Making HTTP Requests",
+        "body": [
+            "$client = \/Config\/Services::curlrequest();",
+            "",
+            "$response = $client->request('GET', 'https://api.github.com/user', [",
+            "        'auth' => ['user', 'pass']",
+            "]);"
+        ]
+    },
+}
