@@ -8,6 +8,11 @@
     "engines": {
         "vscode": "^1.44.0"
     },
+    "keywords": [
+        "codeigniter4",
+        "snippets",
+        "php"
+    ],
     "galleryBanner": {
         "color": "#549BFF",
         "theme": "dark"
