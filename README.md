@@ -55,3 +55,9 @@ ext install codeigniter4-snippets
 3. Commit your changes (`git commit -am 'Add some snippet'`)
 4. Push to the branch (`git push origin my-new-snippet`)
 5. Create a new Pull Request
+
+Happy coding!
+
+## License
+
+[![GitHub license](https://img.shields.io/github/license/benemohamed/codeigniter4-snippets.svg)](https://github.com/benemohamed/codeigniter4-snippets)
