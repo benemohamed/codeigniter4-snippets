@@ -26,5 +26,8 @@
                 "path": "./snippets/snippets.json"
             }
         ]
+    },
+    "scripts": {
+        "build": "vsce package -o benemohamed.codeigniter4-snippets-$npm_package_version.vsix"
     }
 }
