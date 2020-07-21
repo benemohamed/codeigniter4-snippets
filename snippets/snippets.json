@@ -28,11 +28,15 @@
         "prefix": "ci4_controller",
         "description": "codeigniter4 - Base Controller",
         "body": [
-            "class ${TM_FILENAME} extends Controller",
+            "namespace App\/Controllers;",
+            "",
+            "use CodeIgniter\/Controller;",
+            "",
+            "class ${1:${TM_FILENAME}} extends Controller",
             "{",
-            "    public function $0()",
+            "    public function ${2:index}($3)",
             "    {",
-            "        $1",
+            "        $4",
             "    }",
             "}"
         ]
@@ -89,8 +93,7 @@
         "prefix": "ci4_getGet",
         "description": "codeigniter4 - return any data from $_GET",
         "body": [
-            "$request->getGet('${1:var_name}');",
-            "$2"
+            "\\$${1:this->}request->getGet('${2:var_name}')"
         ]
     },
     "codeigniter4GetLocale": {
@@ -105,8 +108,7 @@
         "prefix": "ci4_getPost",
         "description": "codeigniter4 - This method is identical to getVar(), only it fetches POST data ",
         "body": [
-            "$request->getPost('${1:var_name}');",
-            "$2"
+            "\\$${1:this->}request->getPost('${2:var_name}')"
         ]
     },
     "codeigniter4Getserver": {
@@ -121,8 +123,7 @@
         "prefix": "ci4_getVar",
         "description": "codeigniter4 - This method is identical to getVar(), only it fetches GET data. ",
         "body": [
-            "$request->getVar('${1:var_name}');",
-            "$2"
+            "\\$${1:this->}request->getVar('${2:var_name}')"
         ]
     },
     "codeigniter4Isajax": {
